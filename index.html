@@ -15,7 +15,7 @@
             <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3" style="background-color:#212123 !important; border-bottom:#363738 !important">
                 <div class="container" style="justify-content: left !important;">
                   
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" onclick="showHide()" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="display: block !important">
+                    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" onclick="showHide()" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="display: block !important">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="justify-content-between" id="menu" style="display: none">
@@ -25,7 +25,7 @@
                             </li>
                             
                             <li class="nav-item">
-                                <a class="nav-link text-light" href="./pages/semantica.html" style="font-size:20px">Semiótica/semiosis/
+                                <a class="nav-link text-light" href="./pages/semiotica.html" style="font-size:20px">Semiótica/semiosis/
                                     semiosfera</a>
                             </li>
 
@@ -83,5 +83,10 @@
     
 }
     </script>
+    <style>
+        .custom-toggler .navbar-toggler-icon {
+background-image: url("./imgs/Menu.png");
+}
+    </style>
 
 </html>
