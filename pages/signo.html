@@ -6,8 +6,11 @@
     
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
         <title>Hello, world!</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
 
       </head>
     <body>
@@ -67,40 +70,100 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2>¿Qué es un signo?</h2>
-                    <p>Signo todo aquello que representa otra cosa, es decir o que esta en lugar de otra cosa, la cosa representada es el significado</p>
+                    <h1 style="text-align: center">El signo</h1>
                     <ul class="list-group">
-                        <li class="list-group-item list-group-item-danger">• El signo es el mediador entre nosotros y el representado</li>
-                        <li class="list-group-item list-group-item-warning">• Un conjunto de signos forma un codigo, que permite transmitir las ideas y experiencias </li>
-                        <li class="list-group-item list-group-item-primary">• El lenguaje (código) es un sistema de acuerdos. (Alfabeto oxidental, significado de los colores, braile, lenguaje de señas, etc.)</li>
-                    </ul>
-                </div>
-                <div class="col-md-12">
-                    <h2>Semiósis</h2>
-                    <p>La semiosis es cualquier forma de actividad, conducta, o proceso que involucre signos,
-                       incluyendo la creación de significados. es un proceso que se desarrolla en la mente del
-                       interprete; inicia con la persepción del signo y finaliza con la presencia en su mente 
-                       del objeto del signo.   
-                    </p>
-                </div>
-                <div class="col-md-12">
-                    <h2>Semiosfera</h2>
-                    <h3>La semiosfera para Lotman</h3>
-
-                    <p>Es un espacio abstracto, es un espacio semiótico el cual posibilita la semiosis, fuera del cual es imposible el concepto de la semiosis
-                       </p>
-                       <ul class="list-group">
-                        <li class="list-group-item list-group-item-primary">• La semiosfera es el resultado y al mismo tiempo la condicion del desarrollo de la cultura
+                        <li class="list-group-item list-group-item-primary">Los tipos de signos
                             <ul class="list-group">
-                                <li class="list-group-item">Acotado</li>
-                                <li class="list-group-item">Intimo</li>
+                              <li class="list-group-item cursorPonter" onclick="showHideNat()">Naturates
+                                <span class="fa-solid fa-caret-up"></span>
+                                <span class="fa-solid fa-caret-down"></span>
+                                
+                                <div id="signosNatID">
+                                    • Los signos naturales comunican ideas de forma espontánea:<br>
+                                    • La luna representa que es de noche<br>
+                                    • La sangre indica que alguien o algo esta herido<br>
+                                    • Las abejas y avispas significan peligro<br>
+                                    
+                                </div>
+                             </li>
+                                
+                                <li class="list-group-item cursorPonter" onclick="showHideArt()">Artificiales
+                                    <span class="fa-solid fa-caret-up"></span>
+                                    <span class="fa-solid fa-caret-down"></span>
+                                    
+                                    <div id="signosArtID">
+                                        • Los signos artificiales son creados con la intención de comunicar:<br>
+                                        • Uno de estos signos podrian ser las flechas que indican direccion o un objetivo deribado de las cacerias en las antiguas civilizaciones humanas <br>
+                                     
+                                    </div>
+                                </li>
                             </ul>
                         </li>
 
                     </ul>
+
+                    <h2>Signos visuales</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-danger">• Icono: Es aquel o aquello con bastante semejanza al objeto representado</li>
+                        <li class="list-group-item list-group-item-warning">• Indicio: El indicio es un signo que indica una relacion cercana a lo representado, ejemplo el humo es indicio de fuego </li>
+                        <li class="list-group-item list-group-item-primary">• Simbolos: Es un acuerdo social de signos que reprentan un significado</li>
+                    </ul>
+                </div>
+                <div class="col-md-12">
+                    <br>
+                    <div style="text-align: center;">
+                        <a href="#" id="liveToastBtn" title="click me">
+                        <img src="../imgs/imagen09.png" alt="alternatetext" style="height: 300px;">
+                    </a>
+                    </div>
+
                 </div>
             </div>
 
+            <div class="position-fixed bottom-0 right-0 p-3" style="z-index: 5; right: 0; bottom: 0; top: 1%;">
+                <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true" data-delay="35000">
+                  <div class="toast-header">
+                    
+                    <strong class="mr-auto">Sátira del suicidio romántico</strong>
+                    <small>Leonardo AlenzaCa. 1839</small>
+                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="toast-body">
+                      <h4>Detalles</h2>
+                        Título: Sátira del suicidio romántico
+                      <br>
+                        Creador: Leonardo Alenza
+                      <br>
+                        Fecha de creación: Ca. 1839
+                      <br>
+                        Dimensiones físicas: w28.5 x h36.5 cm
+                      <br>
+                        Tipo: Pintura
+                      <br>
+                        Vínculo externo: CERES
+                      <br>
+                        Derechos: Museo Nacional del Romanticismo
+                      <br>
+                        Técnica: Óleo sobre lienzo
+                      <br>
+                        Signatura: L. Alenza
+                      <br>
+                        Contexto cultural: Romanticismo español
+                      <div style="padding-top: 5px;">
+                          <h4>Descripción</h2>
+                              
+                          <p>
+                            Esta emblemática imagen muestra en primer plano un hombre de complexión famélica, vestido con larga camisa blanca, descalzo y con expresión perdida, se lanza al abismo desde una roca, extendiendo el brazo con un puñal que sostiene en la mano izquierda. A sus pies, en segundo plano, se describe un somero paisaje donde yace un hombre muerto sobre un reguero de sangre y otro personaje ahorcado en un árbol. Sobre la roca se disponen una serie de objetos alegóricos para el romántico: el tintero y la pluma del escritor, una espada, una laurea sobre una cruz en alusión a la fama, varios libros y una calavera símbolo de la muerte
+                          </p>
+                      </div>
+                      
+                  </div>
+                </div>
+              </div>
+            <br>
+            <br>
         </div>
     </body>
     <script>
@@ -112,11 +175,46 @@
         document.getElementById("menu").style.display="inline";
     }
     
-}
+       }
+       document.getElementById("signosNatID").style.display = "none";
+       document.getElementById("signosArtID").style.display = "none";
+
+       function showHideNat(){
+        var naturales = document.getElementById("signosNatID")
+        if(naturales.style.display == "none"){
+            naturales.style.display = ""
+        }else{
+            naturales.style.display = "none"
+        }
+            
+       }
+
+       function showHideArt(){
+        var naturales = document.getElementById("signosArtID")
+        if(naturales.style.display == "none"){
+            naturales.style.display = ""
+        }else{
+            naturales.style.display = "none"
+        }
+            
+       }
+
+       const toastTrigger = document.getElementById('liveToastBtn')
+        const toastLiveExample = document.getElementById('liveToast')
+        if (toastTrigger) {
+            toastTrigger.addEventListener('click', () => {
+                const toast = new bootstrap.Toast(toastLiveExample)
+             
+                toast.show()
+            })
+        }
     </script>
     <style>
         .custom-toggler .navbar-toggler-icon {
 background-image: url("../imgs/Menu.png");
 }
+        .cursorPonter{
+            cursor: pointer;
+        }
     </style>
 </html>
